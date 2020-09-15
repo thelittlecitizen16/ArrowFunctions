@@ -28,19 +28,6 @@ fibonacci(10);
 
 function Get(array)
 {
-    let newBigArray=[];
-
-    array.forEach(elementBigArray => {
-        let newArray=[];
-        elementBigArray.forEach(elementArray => {
-            if(elementArray%2==0)
-            {
-                newArray.push(elementArray);
-            }
-        });
-        newBigArray.push(newArray);
-    });
-
-    return newBigArray;
+    return array.map(a=>a.filter(a=>a %2 ==0));
 }
 console.log(Get([[1, 2, 3], [4, 6, 9]]));
